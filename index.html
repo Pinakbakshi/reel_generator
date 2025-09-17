@@ -1,0 +1,37 @@
+<script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai@^1.4.0"
+    }
+  }
+</script>
+<div class="container">
+  <main class="main-content">
+    <h1>AI Video Clip Extractor</h1>
+    <p>Upload a short video to automatically identify the most engaging moments. The AI will generate short, shareable clips with titles and captions.</p>
+    <div class="controls">
+      <input id="file-input" type="file" accept="video/*" />
+      <button id="analyze-button" disabled>Analyze Video</button>
+    </div>
+    <video id="video-player" controls></video>
+    <p id="status">Please upload a video to begin.</p>
+  </main>
+  <aside class="sidebar">
+    <h2>Generated Clips</h2>
+    <div id="clips-container">
+      <p class="placeholder">Your generated clips will appear here.</p>
+    </div>
+  </aside>
+</div>
+
+<div id="error-modal" class="modal-overlay">
+  <div class="modal-content">
+    <div id="error-message-container"></div>
+    <div class="modal-actions">
+      <button id="modal-add-key-button">Add API Key</button>
+      <button id="modal-close-button">Close</button>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="/index.css">
+<script type="module" src="/index.tsx"></script>

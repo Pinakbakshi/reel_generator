@@ -1,0 +1,194 @@
+body {
+  font-family: 'Google Sans', sans-serif, system-ui;
+  background-color: #f8f9fa;
+  color: #3c4043;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2em;
+  color: #1a73e8;
+}
+
+h2 {
+  font-size: 1.5em;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+input, button {
+  font: inherit;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  background-color: #1a73e8;
+  color: white;
+  border-color: #1a73e8;
+  font-weight: bold;
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-content {
+  flex: 2;
+  min-width: 320px;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  height: fit-content;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#video-player {
+  width: 100%;
+  max-height: 450px;
+  background-color: #000;
+  border-radius: 8px;
+  display: none; /* Hidden by default */
+}
+
+#status {
+  margin-top: 15px;
+  color: #5f6368;
+}
+
+#clips-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.placeholder {
+  color: #5f6368;
+}
+
+.clip-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.clip-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-color: #1a73e8;
+}
+
+.clip-card.active {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px #1a73e8;
+}
+
+
+.clip-card h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #202124;
+  font-size: 1.1em;
+}
+
+.clip-card .timestamp {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.clip-card .captions {
+  font-size: 0.95em;
+  color: #3c4043;
+  font-style: italic;
+  border-left: 3px solid #ccc;
+  padding-left: 10px;
+  margin: 0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 24px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  text-align: center;
+  color: black;
+}
+
+.modal-content p {
+    margin: 0 0 16px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#modal-add-key-button {
+  background-color: #4285F4;
+  color: white;
+  border-color: #4285F4;
+}
+
+#modal-close-button {
+    background-color: #e0e0e0;
+    color: #333;
+}
