@@ -1,20 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Reel Generator
 
-# Run and deploy your AI Studio app
+A web application project for experimenting with AI-assisted short-form video/reel generation. Confirm the supported generation workflow, providers, and current feature set by inspecting the source and project configuration.
 
-This contains everything you need to run your app locally.
+## Setup
 
-View your app in AI Studio: https://ai.studio/apps/bundled/genai_videos_with_veo
+1. Install a supported Node.js LTS version.
+2. Install dependencies using the lockfile-aware command appropriate to the package manager (for npm projects, `npm ci` when a compatible lockfile is present).
+3. Copy the documented example environment file, if one exists, and configure required API keys locally.
+4. Start the development server using the script defined in `package.json`.
+5. Build and test a production bundle before deployment.
 
-## Run Locally
+## Security
 
-**Prerequisites:**  Node.js
+- Never commit API keys, access tokens, or generated private media.
+- Keep provider calls server-side when credentials must remain secret.
+- Validate uploaded files and generated output, set size/time limits, and handle provider failures.
+- Check the rights and consent for source media, voices, music, and likenesses used in generated videos.
 
+## Project quality checklist
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Document the required environment variables, supported Node version, available scripts, provider costs/limits, and output formats. Add tests for validation, provider errors, and failure recovery. README instructions should match the current implementation.
